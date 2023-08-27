@@ -3,10 +3,12 @@ import openai
 import os 
 from langchain import PromptTemplate, OpenAI, LLMChain 
 
-#API KEY read in from env variable
-os.environ['OPENAI_API_KEY'] = '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'
-openai.api_key = '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'
-
+# Read the API key from the local .txt file and assign it to the environment variable
+with open("api_key.txt", "r") as file:
+    openai_key = file.read().strip()
+    
+os.environ["OPENAI_API_KEY"] = openai_key #set environment variable for openai api key
+    
 #random string that allows LLM to think step by step 
 template = """Question: {question} 
 

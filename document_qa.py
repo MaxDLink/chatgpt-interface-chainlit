@@ -12,11 +12,14 @@ from langchain.chat_models import ChatOpenAI
 import chainlit as cl 
 from chainlit.types import AskFileResponse 
 import os 
+import openai
 
-os.environ['OPENAI_API_KEY'] = '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'
+# Read the API key from the local .txt file and assign it to the environment variable
+with open("api_key.txt", "r") as file:
+    openai_key = file.read().strip()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100) #splits the text from the PDF into chunks of 1000 characters, with 100 characters of overlap between chunks
-embeddings = OpenAIEmbeddings() #ADA 2 model (best performance and cheapest cost) for embedding layer defined here 
+embeddings = OpenAIEmbeddings(openai_api_key=openai_key) #ADA 2 model (best performance and cheapest cost) for embedding layer defined here 
 
 welcome_message = """Welcome to teh ChainLit PDF QA demo! To get started: 
 1. Upload a PDF file
