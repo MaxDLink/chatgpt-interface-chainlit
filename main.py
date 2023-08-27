@@ -1,8 +1,9 @@
 import chainlit as cl 
 import openai 
 import os 
-os.environ['OPENAI_API_KEY'] = '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'
-openai.api_key = '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'
+
+# Read the API key from the local .txt file and assign it to the environment variable
+openai.api_key_path = "api_key.txt"
 #return everything that the user inputs 
 
 #pass the message into chatgpt api ... send() the answer 
