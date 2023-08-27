@@ -17,6 +17,8 @@ import openai
 # Read the API key from the local .txt file and assign it to the environment variable
 with open("api_key.txt", "r") as file:
     openai_key = file.read().strip()
+    
+os.environ["OPENAI_API_KEY"] = openai_key #set environment variable for openai api key
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100) #splits the text from the PDF into chunks of 1000 characters, with 100 characters of overlap between chunks
 embeddings = OpenAIEmbeddings(openai_api_key=openai_key) #ADA 2 model (best performance and cheapest cost) for embedding layer defined here 
