@@ -2,7 +2,7 @@ import os
 
 #pip install pypdf 
 #export HNSWLIB_NO_NATIVE=1 
-
+#TODO - left off at 1:19:11 from tutorial 
 from langchain.document_loaders import PyPDFLoader, TextLoader 
 from langchain.text_splitter import RecursiveCharacterTextSplitter 
 from langchain.embeddings.openai import OpenAIEmbeddings 
