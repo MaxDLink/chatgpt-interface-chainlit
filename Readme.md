@@ -16,7 +16,12 @@ To get started, follow these steps...
 
 ## Usage
 
-chainlit run main.py -w 
+"ChatGPT clone without LLM mechanics": chainlit run main.py -w 
+
+"ChatGPT clone with LLM mechanics": 
+chainlit run langchain_integration.py -w 
+
+
 
 ## Troubleshooting
 
