@@ -21,6 +21,9 @@ To get started, follow these steps...
 "ChatGPT clone with LLM mechanics": 
 chainlit run langchain_integration.py -w 
 
+"Document Based Question & Answer system w/ semantic search, pinecone, & LLMs": 
+chainlit run document_qa.py -w 
+
 
 
 ## Troubleshooting
