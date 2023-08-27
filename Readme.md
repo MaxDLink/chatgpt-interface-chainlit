@@ -15,6 +15,7 @@ To get started, follow these steps...
 <!-- Important Note: Make sure you have the latest version of XYZ installed. -->
 
 ## Usage
+paste your api key into a file called "api_key.txt" in the program root dir. You can get your api key from https://platform.openai.com/playground
 
 "ChatGPT clone without LLM mechanics": chainlit run main.py -w 
 
